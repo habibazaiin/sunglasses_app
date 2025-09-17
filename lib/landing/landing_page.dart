@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sunglasses/home/home_page.dart';
 import 'package:sunglasses/widgets/custom_button.dart';
 import 'package:sunglasses/widgets/custom_icon.dart';
 
@@ -36,7 +37,18 @@ class LandingPage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      CustomButton(title: 'Start Shopping'),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  const HomePage(),
+                            ),
+                          );
+                        },
+                        child: CustomButton(title: 'Start Shopping'),
+                      ),
                       SizedBox(width: 20),
                       CustomIcon(),
                     ],
@@ -50,4 +62,3 @@ class LandingPage extends StatelessWidget {
     );
   }
 }
-
