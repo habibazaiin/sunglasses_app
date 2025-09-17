@@ -8,7 +8,28 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.sizeOf(context).width;
     return Scaffold(
-      
+      backgroundColor: Colors.black,
+      body: Column(
+        children: [
+          SizedBox(height: 40),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 25),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                MenuIcon(width: 30, height: 20),
+                Icon(
+                  Icons.shopping_bag_outlined,
+                  size: 30,
+                  color: Colors.white,
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 40),
+          
+        ],
+      ),
     );
   }
 }
