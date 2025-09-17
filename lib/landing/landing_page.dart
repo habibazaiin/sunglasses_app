@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sunglasses/constants.dart';
+import 'package:sunglasses/widgets/custom_button.dart';
+import 'package:sunglasses/widgets/custom_icon.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({super.key});
@@ -37,17 +38,7 @@ class LandingPage extends StatelessWidget {
                     children: [
                       CustomButton(title: 'Start Shopping'),
                       SizedBox(width: 20),
-                      Container(
-                        padding: EdgeInsets.all(20),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(40),
-                          color: Colors.white,
-                        ),
-                        child: const Icon(
-                          Icons.arrow_forward_rounded,
-                          color: Colors.black,
-                        ),
-                      ),
+                      CustomIcon(),
                     ],
                   ),
                 ],
@@ -60,29 +51,3 @@ class LandingPage extends StatelessWidget {
   }
 }
 
-class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, this.color, required this.title});
-  final Color? color;
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(vertical: 22, horizontal: 30),
-      decoration: BoxDecoration(
-        color: color ?? kLightYellow,
-        borderRadius: BorderRadius.circular(35),
-      ),
-      child: Center(
-        child: Text(
-          title,
-          style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.w500,
-            fontSize: 22,
-          ),
-        ),
-      ),
-    );
-  }
-}
