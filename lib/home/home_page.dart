@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sunglasses/widgets/menu_icon.dart';
+import 'package:sunglasses/widgets/ShoppingIcon.dart';
+import 'package:sunglasses/widgets/appbar_home_page.dart';
+import 'package:sunglasses/widgets/home_image.dart';
+import 'package:sunglasses/widgets/home_page_image_section.dart';
+import 'package:sunglasses/widgets/text_home_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -12,24 +16,16 @@ class HomePage extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(height: 40),
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 25),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                MenuIcon(width: 30, height: 20),
-                Icon(
-                  Icons.shopping_bag_outlined,
-                  size: 30,
-                  color: Colors.white,
-                ),
-              ],
-            ),
-          ),
+          AppBarHomePage(),
           SizedBox(height: 40),
-          
+          SizedBox(
+            height: 450,
+            width: double.infinity,
+            child: HomePageImageSection(screenWidth: screenWidth),
+          ),
         ],
       ),
     );
   }
 }
+
