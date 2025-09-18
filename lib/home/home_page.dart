@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sunglasses/widgets/appbar_home_page.dart';
 import 'package:sunglasses/widgets/home_page_image_section.dart';
 import 'package:sunglasses/widgets/product_tile.dart';
+import 'package:sunglasses/widgets/product_tile_list_view.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -23,14 +24,7 @@ class HomePage extends StatelessWidget {
                   SizedBox(height: 40),
                   HomePageImageSection(screenWidth: screenWidth),
                   SizedBox(height: 50),
-                  ProductTile(image: 'assets/glass1.png'),
-                  SizedBox(height: 16),
-                  ProductTile(image: 'assets/glass1.png'),
-                  SizedBox(height: 16),
-                  ProductTile(image: 'assets/glass1.png'),
-                  SizedBox(height: 16),
-                  ProductTile(image: 'assets/glass1.png'),
-                  SizedBox(height: 16),
+                  ProductTileListView(),
                 ],
               ),
             ),
