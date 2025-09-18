@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sunglasses/widgets/appbar_product_details_page.dart';
 
 class ProductsDetails extends StatelessWidget {
   const ProductsDetails({super.key});
@@ -22,7 +23,7 @@ class ProductsDetails extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: 70),
-            
+            AppbarProductDetailsPage()
           ],
         ),
       ),
